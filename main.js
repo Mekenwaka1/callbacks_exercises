@@ -1,114 +1,108 @@
 const transactions = [
   {
-    type: 'sale',
-    paymentMethod: 'cash',
-    customer: 'Isaac Asimov',
+    type: "sale",
+    paymentMethod: "cash",
+    customer: "Isaac Asimov",
+    items: [{name: "Byte", price: 1.0}, {name: "Bit", price: 0.125}]
+  },
+  {
+    type: "sale",
+    paymentMethod: "credit",
+    customer: "CJ Cherryh",
     items: [
-      { name: 'Byte', price: 1.00 },
-      { name: 'Bit', price: 0.125 }
+      {name: "Bit", price: 0.125},
+      {name: "Bit", price: 0.125},
+      {name: "Bit", price: 0.125}
     ]
   },
   {
-    type: 'sale',
-    paymentMethod: 'credit',
-    customer: 'CJ Cherryh',
+    type: "purchase",
+    paymentMethod: "credit",
+    vendor: "Dick's Doodads",
     items: [
-      { name: 'Bit', price: 0.125 },
-      { name: 'Bit', price: 0.125 },
-      { name: 'Bit', price: 0.125 }
+      {name: "XL Doodad", price: -3.0},
+      {name: "XS Doodad", price: -0.5},
+      {name: "XS Doodad", price: -0.5}
     ]
   },
   {
-    type: 'purchase',
-    paymentMethod: 'credit',
-    vendor: 'Dick\'s Doodads',
+    type: "purchase",
+    paymentMethod: "cash",
+    vendor: "Gibson Gadgets",
     items: [
-      { name: 'XL Doodad', price: -3.00 },
-      { name: 'XS Doodad', price: -0.50 },
-      { name: 'XS Doodad', price: -0.50 }
+      {name: "Basic Gadget", price: -2.0},
+      {name: "Advanced Gadget", price: -3.5}
     ]
   },
   {
-    type: 'purchase',
-    paymentMethod: 'cash',
-    vendor: 'Gibson Gadgets',
+    type: "sale",
+    paymentMethod: "credit",
+    customer: "Frederik Pohl",
     items: [
-      { name: 'Basic Gadget', price: -2.00 },
-      { name: 'Advanced Gadget', price: -3.50  }
+      {name: "Byte", price: 1.0},
+      {name: "Byte", price: 1.0},
+      {name: "Bit", price: 0.125},
+      {name: "Bit", price: 0.125},
+      {name: "Bit", price: 0.125}
     ]
   },
   {
-    type: 'sale',
-    paymentMethod: 'credit',
-    customer: 'Frederik Pohl',
+    type: "purchase",
+    paymentMethod: "cash",
+    vendor: "Clarke Computing",
     items: [
-      { name: 'Byte', price: 1.00 },
-      { name: 'Byte', price: 1.00 },
-      { name: 'Bit', price: 0.125 },
-      { name: 'Bit', price: 0.125 },
-      { name: 'Bit', price: 0.125 }
+      {name: "Floppy Disk", price: -0.1},
+      {name: "Floppy Disk", price: -0.1},
+      {name: "Floppy Disk", price: -0.1},
+      {name: "Floppy Disk", price: -0.1},
+      {name: "Floppy Disk", price: -0.1},
+      {name: "Floppy Disk", price: -0.1},
+      {name: "Floppy Disk", price: -0.1}
     ]
   },
   {
-    type: 'purchase',
-    paymentMethod: 'cash',
-    vendor: 'Clarke Computing',
+    type: "sale",
+    paymentMethod: "credit",
+    customer: "Neal Stephenson",
+    items: [{name: "kilobyte", price: 1024.0}]
+  },
+  {
+    type: "purchase",
+    paymentMethod: "credit",
+    vendor: "Gibson Gadgets",
     items: [
-      { name: 'Floppy Disk', price: -0.10 },
-      { name: 'Floppy Disk', price: -0.10 },
-      { name: 'Floppy Disk', price: -0.10 },
-      { name: 'Floppy Disk', price: -0.10 },
-      { name: 'Floppy Disk', price: -0.10 },
-      { name: 'Floppy Disk', price: -0.10 },
-      { name: 'Floppy Disk', price: -0.10 }
+      {name: "Advanced Gadget", price: -3.5},
+      {name: "Advanced Gadget", price: -3.5},
+      {name: "Advanced Gadget", price: -3.5},
+      {name: "Advanced Gadget", price: -3.5}
     ]
   },
   {
-    type: 'sale',
-    paymentMethod: 'credit',
-    customer: 'Neal Stephenson',
+    type: "purchase",
+    paymentMethod: "credit",
+    vendor: "Dick's Doodads",
     items: [
-      { name: 'kilobyte', price: 1024.00 }
+      {name: "XL Doodad", price: -3.0},
+      {name: "XL Doodad", price: -3.0},
+      {name: "XL Doodad", price: -3.0}
     ]
   },
   {
-    type: 'purchase',
-    paymentMethod: 'credit',
-    vendor: 'Gibson Gadgets',
+    type: "sale",
+    paymentMethod: "cash",
+    customer: "Isaac Asimov",
     items: [
-      { name: 'Advanced Gadget', price: -3.50  },
-      { name: 'Advanced Gadget', price: -3.50  },
-      { name: 'Advanced Gadget', price: -3.50  },
-      { name: 'Advanced Gadget', price: -3.50  }
-    ]
-  },
-  {
-    type: 'purchase',
-    paymentMethod: 'credit',
-    vendor: 'Dick\'s Doodads',
-    items: [
-      { name: 'XL Doodad', price: -3.00 },
-      { name: 'XL Doodad', price: -3.00 },
-      { name: 'XL Doodad', price: -3.00 }
-    ]
-  },
-  {
-    type: 'sale',
-    paymentMethod: 'cash',
-    customer: 'Isaac Asimov',
-    items: [
-      { name: 'Bit', price: 0.125 },
-      { name: 'Bit', price: 0.125 },
-      { name: 'Bit', price: 0.125 },
-      { name: 'Bit', price: 0.125 },
-      { name: 'Bit', price: 0.125 },
-      { name: 'Bit', price: 0.125 },
-      { name: 'Bit', price: 0.125 },
-      { name: 'Bit', price: 0.125 },
+      {name: "Bit", price: 0.125},
+      {name: "Bit", price: 0.125},
+      {name: "Bit", price: 0.125},
+      {name: "Bit", price: 0.125},
+      {name: "Bit", price: 0.125},
+      {name: "Bit", price: 0.125},
+      {name: "Bit", price: 0.125},
+      {name: "Bit", price: 0.125}
     ]
   }
 ];
-
 
 // --------------------------------------------------
 // EXAMPLE QUESTION
@@ -118,8 +112,7 @@ const transactions = [
 */
 const totalTransactions = transactions.length;
 
-console.log( 'The total number of transactions is:', totalTransactions );
-
+console.log("The total number of transactions is:", totalTransactions);
 
 // --------------------------------------------------
 // QUESTION 01
@@ -130,7 +123,9 @@ console.log( 'The total number of transactions is:', totalTransactions );
   HINT(S):
   - Not all transactions are 'sales'.
 */
-const numSales;
+const numSales = transactions.filter(
+  transaction => transaction["type"] === "sale"
+).length;
 
 /*
   Hey, welcome to the first question!
@@ -151,8 +146,7 @@ const numSales;
   The breakdown above takes up a lot of space, feel free to move it to the top or bottom of the file!
 */
 
-console.log( 'The total number of sales is:', numSales );
-
+console.log("The total number of sales is:", numSales);
 
 // --------------------------------------------------
 // QUESTION 02
@@ -160,10 +154,11 @@ console.log( 'The total number of sales is:', numSales );
 /*
   Calculate the total number of 'purchases'.
 */
-const numPurchases;
+const numPurchases = transactions.filter(
+  transaction => transaction["type"] === "purchase"
+).length;
 
-console.log( 'The total number of purchases is:', numPurchases );
-
+console.log("The total number of purchases is:", numPurchases);
 
 // --------------------------------------------------
 // QUESTION 03
@@ -174,10 +169,12 @@ console.log( 'The total number of purchases is:', numPurchases );
   HINT(S):
   - Don't forget that 'purchases' can also be made in 'cash'!
 */
-const numCashSales;
+const numCashSales = transactions.filter(
+  transaction =>
+    transaction["type"] === "sale" && transaction["paymentMethod"] === "cash"
+).length;
 
-console.log( 'The total number of cash sales is:', numCashSales );
-
+console.log("The total number of cash sales is:", numCashSales);
 
 // --------------------------------------------------
 // QUESTION 04
@@ -188,10 +185,13 @@ console.log( 'The total number of cash sales is:', numCashSales );
   HINT(S):
   - Make sure to exclude any 'sales' made by 'credit'!
 */
-const numCreditPurchases;
+const numCreditPurchases = transactions.filter(
+  transaction =>
+    transaction["type"] === "purchase" &&
+    transaction["paymentMethod"] === "credit"
+).length;
 
-console.log( 'The total number of credit purchases is:', numCreditPurchases );
-
+console.log("The total number of credit purchases is:", numCreditPurchases);
 
 // --------------------------------------------------
 // QUESTION 05
@@ -205,10 +205,14 @@ console.log( 'The total number of credit purchases is:', numCreditPurchases );
   - The assembled array should be made up of strings, not full `transaction` objects.
   - This array is allowed to contain duplicate values.
 */
-const allVendors;
+const allVendors = [];
+transactions.forEach(transaction => {
+  if (transaction["vendor"] && !allVendors.includes(transaction["vendor"])) {
+    allVendors.push(transaction["vendor"]);
+  }
+});
 
-console.log( 'The vendors are:', allVendors );
-
+console.log("The unique vendors are:", allVendors);
 
 // --------------------------------------------------
 // QUESTION 06
@@ -222,10 +226,18 @@ console.log( 'The vendors are:', allVendors );
   - The assembled array should be made up of strings, not full `transaction` objects.
   - Make sure that the resulting array *does not* include any duplicates.
 */
-const uniqueCustomers;
+const uniqueCustomers = [];
 
-console.log( 'The unique customers are:', uniqueCustomers );
+transactions.forEach(transaction => {
+  if (
+    transaction["customer"] &&
+    !uniqueCustomers.includes(transaction["customer"])
+  ) {
+    uniqueCustomers.push(transaction["customer"]);
+  }
+});
 
+console.log("The unique customers are:", uniqueCustomers);
 
 // --------------------------------------------------
 // QUESTION 07
@@ -240,10 +252,19 @@ console.log( 'The unique customers are:', uniqueCustomers );
   - There may be more than 1 'sale' that includes 5 or more items.
   - Individual transactions do not have either `name` or `numItems` properties, we'll have to add them to the output.
 */
-const bigSpenders;
+const bigSpenders = transactions
+  .filter(
+    transaction =>
+      transaction["type"] === "sale" && transaction["items"].length >= 5
+  )
+  .map(transaction => {
+    return {
+      name: transaction["customer"],
+      numItems: transaction["items"].length
+    };
+  });
 
-console.log( 'The "big spenders" are:', bigSpenders );
-
+console.log('The "big spenders" are:', bigSpenders);
 
 // --------------------------------------------------
 // QUESTION 08
@@ -254,10 +275,15 @@ console.log( 'The "big spenders" are:', bigSpenders );
   HINT(S):
   - Transactions don't have 'prices', but their 'items' do!
 */
-const sumFirstSale;
+let sumFirstSale = 0;
 
-console.log( 'The sum of the first sale items is:', sumFirstSale );
+transactions
+  .filter(item => item["type"] === "sale")
+  .forEach(currentItem => {
+    sumFirstSale += currentItem["items"][0]["price"];
+  });
 
+console.log("The sum of the first sale items is:", sumFirstSale);
 
 // --------------------------------------------------
 // QUESTION 09
@@ -269,11 +295,16 @@ console.log( 'The sum of the first sale items is:', sumFirstSale );
   - Your solution to 'QUESTION 08' is a good starting point!
   - Make sure to include 'price' information from *all* purchases.
 */
+// 1. Get the list of all purchases using filter
+// 2. Add the sum of all purchase items to sumPurchases
+let sumPurchases = 0;
+transactions
+  .filter(item => item["type"] === "purchase")
+  .forEach(obj => {
+    obj["items"].forEach(item => (sumPurchases += item["price"]));
+  });
 
-const sumPurchases;
-
-console.log( 'The sum of all purchases is:', sumPurchases );
-
+console.log("The sum of all purchases is:", sumPurchases);
 
 // --------------------------------------------------
 // QUESTION 10
@@ -288,10 +319,22 @@ console.log( 'The sum of all purchases is:', sumPurchases );
   HINT(S):
   - Unlike 'QUESTION 08' and 'QUESTION 09', here we're interested in both 'sale' and 'purchase' transactions.
 */
-const netProfit;
+let sumOfPurchases = 0;
+transactions
+  .filter(item => item["type"] === "purchase")
+  .forEach(obj => {
+    obj["items"].forEach(item => (sumOfPurchases += item["price"]));
+  });
+let sumSales = 0;
+transactions
+  .filter(item => item["type"] === "sale")
+  .forEach(obj => {
+    obj["items"].forEach(item => (sumSales += item["price"]));
+  });
 
-console.log( 'The net profit is:', netProfit );
+const netProfit = sumSales - sumOfPurchases;
 
+console.log("The net profit is:", netProfit);
 
 // --------------------------------------------------
 // QUESTION 11
@@ -302,10 +345,17 @@ console.log( 'The net profit is:', netProfit );
   HINTS:
   - The result of this calculation should be a number (not an array, object, or other data type).
 */
-const mostItems;
 
-console.log( 'The most items sold in a single transaction is:', mostItems );
+let mostItems = 0;
+transactions
+  .filter(item => item["type"] === "sale")
+  .forEach(obj => {
+    if (obj["items"].length > mostItems) {
+      mostItems = obj["items"].length;
+    }
+  });
 
+console.log("The most items sold in a single transaction is:", mostItems);
 
 // --------------------------------------------------
 // QUESTION 12
@@ -313,6 +363,16 @@ console.log( 'The most items sold in a single transaction is:', mostItems );
 /*
   Calculate the sum of the 'purchase' with the fewest items.
 */
-const sumOfSmallestPurchase;
+let sumOfSmallestPurchase = 0;
+let leastItems = 10;
+transactions
+  .filter(item => item["type"] === "purchase")
+  .forEach(obj => {
+    if (obj["items"].length < leastItems) {
+      leastItems = obj["items"].length;
+      sumOfSmallestPurchase = 0;
+      obj["items"].forEach(item => (sumOfSmallestPurchase += item["price"]));
+    }
+  });
 
-console.log( 'The sum of the smallest purchase is:', sumOfSmallestPurchase );
+console.log("The sum of the smallest purchase is:", sumOfSmallestPurchase);
